@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "e0f87f5c-d657-49c0-ad54-c2711192cc3c",
+		"name": "airtel.africa",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Generate Token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://openapiuat.airtel.africa/auth/oauth2/token?client_id=e11e246d-197d-421f-acd4-f1afd701e80c&client_secret=77dd0378-69d5-417f-9b95-212e44dd4eed&grant_type=client_credentials",
+					"protocol": "https",
+					"host": [
+						"openapiuat",
+						"airtel",
+						"africa"
+					],
+					"path": [
+						"auth",
+						"oauth2",
+						"token"
+					],
+					"query": [
+						{
+							"key": "client_id",
+							"value": "e11e246d-197d-421f-acd4-f1afd701e80c"
+						},
+						{
+							"key": "client_secret",
+							"value": "77dd0378-69d5-417f-9b95-212e44dd4eed"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Payment",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer mhmf7V1as7oIf8Ce06JzZoeUkhERpHBA",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "X-Country",
+						"value": "GA",
+						"type": "text"
+					},
+					{
+						"key": "X-Currency",
+						"value": "XAF",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n      \"reference\": \"Testing transaction\",\r\n      \"subscriber\": {\r\n        \"country\": \"GA\",\r\n        \"currency\": \"XAF\",\r\n        \"msisdn\": 74192293\r\n      },\r\n      \"transaction\": {\r\n        \"amount\": 1000,\r\n        \"country\": \"GA\",\r\n        \"currency\": \"XAF\",\r\n        \"id\": \"random-unique-id\"\r\n      }\r\n}"
+				},
+				"url": {
+					"raw": "https://openapiuat.airtel.africa/merchant/v1/payments/",
+					"protocol": "https",
+					"host": [
+						"openapiuat",
+						"airtel",
+						"africa"
+					],
+					"path": [
+						"merchant",
+						"v1",
+						"payments",
+						""
+					],
+					"query": [
+						{
+							"key": "reference",
+							"value": "Testing transaction",
+							"disabled": true
+						},
+						{
+							"key": "subscriber[country]",
+							"value": "GA",
+							"disabled": true
+						},
+						{
+							"key": "subscriber[currency]",
+							"value": "XAF",
+							"disabled": true
+						},
+						{
+							"key": "subscriber[msisdn]",
+							"value": "9999999",
+							"disabled": true
+						},
+						{
+							"key": "transaction[amount]",
+							"value": "1000",
+							"disabled": true
+						},
+						{
+							"key": "transaction[country]",
+							"value": "GA",
+							"disabled": true
+						},
+						{
+							"key": "transaction[currency]",
+							"value": "XAF",
+							"disabled": true
+						},
+						{
+							"key": "transaction[id]",
+							"value": "121221",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
