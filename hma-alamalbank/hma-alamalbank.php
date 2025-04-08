@@ -2,10 +2,10 @@
 
 /*
   Plugin Name: Al Amal Bank
-  Plugin URI: https://hafizmashfaq.com/
+  Plugin URI: https://github.com/HafizHamzaCS
   Description: Integrate Al Amal Bank payment geteway with woocommerce
-  Author: HafizM.Ashfaq
-  Author URL: https://hafizmashfaq.com/
+  Author: HafizM.Hamza
+  Author URL: https://github.com/HafizHamzaCS
   Version: 0.0.1
 
  */
